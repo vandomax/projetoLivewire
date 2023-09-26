@@ -28,4 +28,9 @@
     </table>
 
     @endforeach
+
+    <hr>
+    <div> {{-- inserindo paginação na blade --}}
+        {{ $tweets->links()}}
+    </div>
 </div>
