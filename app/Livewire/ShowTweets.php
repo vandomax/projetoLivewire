@@ -2,8 +2,8 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
 use App\Models\Tweet;
+use Livewire\Component;
 
 class ShowTweets extends Component
 {
@@ -15,8 +15,14 @@ class ShowTweets extends Component
         $tweets = Tweet::with('user')->get();
 
         return view('livewire.show-tweets', [
-            'message' => $this->message,
             'tweets' => $tweets
+        ]);
+    }
+
+    public function create(){
+        Tweet::create([
+            'content' => $this->message,
+            'user_id'=> 1,
         ]);
     }
 

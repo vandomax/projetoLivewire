@@ -10,10 +10,9 @@
 <body>
 
     <div class="container">
-        {{ teste() }}
+        {{ $slot }}
     </div>
 
     @livewireScripts
 </body>
 </html>
-
